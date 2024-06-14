@@ -1,0 +1,40 @@
+#logo {
+  font-size: 1rem;
+  position: fixed;
+  height: fit-content;
+  border: 12px solid rgba(228, 221, 221, 0.991);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.4;
+  /* display: none; */
+}
+
+body[inview] #lightbox {
+  display: none;
+}
+
+#lightbox {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.489);
+  display: flex;
+  padding: 1rem;
+  justify-content: space-evenly;
+  backdrop-filter: blur(10px);
+  /* display: none; */
+}
+
+#lightimg {
+  width: 50%;
+  background-color: rgba(0, 0, 0, 0.667);
+  position: relative;
+}
+
+/* lightbox buttons */
+
+i {
+  align-self: center;
+  font-size: 4rem;
+  color: orangered;
+}

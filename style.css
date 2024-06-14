@@ -1,0 +1,73 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-family: "Blusvery", sans-serif;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s;
+}
+
+#container {
+  min-height: 100vh;
+  /* border: 2px solid red; */
+  display: grid;
+  grid-template-columns: repeat(11, 1fr);
+  grid-template-areas:
+    "A A A A B B B C C C C"
+    "A A A A B B B C C C C"
+    "E E E E D D D C C C C"
+    "E E E E D D D F F F F"
+    "G G G G G G G F F F F"
+    "G G G G G G G F F F F"
+    "H H H H I I I J J J J"
+    "H H H H I I I J J J J"
+    "K K K K L L L J J J J"
+    "M M M N N N N N N N N"
+    "M M M N N N N N N N N"
+    "O O O P P P P Q Q Q US"
+    "O O O P P P P Q Q Q US"
+    "R R S S S S T T T T T"
+    "R R S S S S T T T T T";
+}
+
+/* smooth scrolling */
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+/* cursor mod*/
+.lightbox-cursor {
+  cursor: zoom-out;
+}

@@ -1,0 +1,134 @@
+.img-1 {
+  grid-area: A;
+}
+.img-2 {
+  grid-area: B;
+}
+.img-3 {
+  grid-area: C;
+}
+.img-4 {
+  grid-area: D;
+}
+.img-5 {
+  grid-area: E;
+}
+.img-6 {
+  grid-area: F;
+}
+.img-7 {
+  grid-area: G;
+}
+.img-8 {
+  grid-area: H;
+}
+.img-9 {
+  grid-area: I;
+}
+.img-10 {
+  grid-area: J;
+}
+.img-11 {
+  grid-area: K;
+}
+.img-12 {
+  grid-area: L;
+}
+.img-13 {
+  grid-area: M;
+}
+.img-14 {
+  grid-area: N;
+}
+.img-15 {
+  grid-area: O;
+}
+.img-16 {
+  grid-area: P;
+}
+.img-17 {
+  grid-area: Q;
+}
+.img-18 {
+  grid-area: R;
+}
+.img-19 {
+  grid-area: S;
+}
+.img-20 {
+  grid-area: T;
+}
+
+.anim1 {
+  animation: 15s infinite alternate ease-in-out 0.5s anim;
+}
+
+.anim2 {
+  animation: 10s infinite alternate ease-in-out anim;
+}
+
+img:hover {
+  opacity: 0.5;
+}
+
+/* figure styling */
+figure {
+  position: relative;
+  overflow: hidden;
+}
+
+/* figcaption modding */
+figcaption {
+  position: absolute;
+  inset: 0;
+  top: 80%;
+  background-color: rgba(0, 0, 0, 0.881);
+  font-size: 1.4rem;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  color: rgba(243, 238, 238, 0.753);
+}
+
+/* figcaption h1 modding */
+figcaption > h1 {
+  transition: transform 0.8s;
+}
+figcaption > p {
+  transition: transform 0.4s;
+}
+figcaption > h1 {
+  transform: translate3d(-10rem, 0, 0);
+}
+/* figcation p modding */
+figcaption > p {
+  transform: translate3d(10rem, 0, 0);
+}
+
+/* Hover mods */
+figure:hover > figcaption {
+  opacity: 0.7;
+}
+
+figcaption:hover {
+  opacity: 1;
+}
+figure:hover > figcaption > h1 {
+  transform: translate3d(0, 0, 0);
+}
+figure:hover > figcaption > p {
+  transform: translate3d(0, 0, 0);
+}
+
+/* animation */
+@keyframes anim {
+  from {
+    transform: scale(0.8);
+  }
+  to {
+    transform: scale(1);
+  }
+}

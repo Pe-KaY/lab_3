@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>pK-Gallerly</title>
+    <!-- fontawsome -->
+    <script
+      src="https://kit.fontawesome.com/b1d08ee4bb.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- cdn fonts -->
+    <link href="https://fonts.cdnfonts.com/css/blusvery" rel="stylesheet" />
+  </head>
+  <body inview>
+    <div id="container"></div>
+    <div id="logo">
+      <h1>pE-KaY Portraits</h1>
+    </div>
+    <div id="lightbox">
+      <i class="fa-solid fa-caret-left" id="previous"></i>
+      <figure id="lightimg">
+        <img class="lightbox-cursor" id="bigimg" alt="lightbox image" />
+      </figure>
+      <i class="fa-solid fa-caret-right" id="next"></i>
+    </div>
+    <script type="module" src="/main.js"></script>
+    <!-- smooth scrolling start -->
+    <script src="https://unpkg.com/lenis@1.1.3/dist/lenis.min.js"></script>
+    <!--  -->
+    <script>
+      const lenis = new Lenis()
+
+      function raf(time) {
+        lenis.raf(time)
+        requestAnimationFrame(raf)
+      }
+
+      requestAnimationFrame(raf)
+    </script>
+    <!-- smooth scrolling ends-->
+  </body>
+</html>
