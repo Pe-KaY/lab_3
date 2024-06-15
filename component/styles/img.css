@@ -91,14 +91,15 @@ figcaption {
   align-items: center;
   justify-content: center;
   color: rgba(243, 238, 238, 0.753);
+  transition: opacity 0.5s;
 }
 
 /* figcaption h1 modding */
 figcaption > h1 {
-  transition: transform 0.8s;
+  transition: transform 0.5s;
 }
 figcaption > p {
-  transition: transform 0.4s;
+  transition: transform 0.5s;
 }
 figcaption > h1 {
   transform: translate3d(-10rem, 0, 0);
