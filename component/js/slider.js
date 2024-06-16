@@ -44,7 +44,8 @@ const slider = () => {
   const nextImg = () => {
     // if it currently thje last image then switch to first
     if (currentImgIndex === images.length - 1) {
-      currentImgIndex = 0
+      currentImgIndex = -1
+      //1 will be added currentImgIndex so -1+1 = 0
     }
     //
     // set the next img index
@@ -59,7 +60,7 @@ const slider = () => {
   const prevImg = () => {
     // if it currently the first image then switch to last(unlimited scrolling)
     if (currentImgIndex === 0) {
-      currentImgIndex = images.length - 1
+      currentImgIndex = images.length 
     }
     //
     // set the next img index
