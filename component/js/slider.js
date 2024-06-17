@@ -2,7 +2,9 @@ const slider = () => {
   // variables
 
   // images
-  const images = Array.from(document.querySelectorAll("img"))
+  const images = Array.from(document.querySelectorAll(".pics"))
+  // lightbox image
+  const lightBoxImg = document.querySelector(".lightbox-pic")
   //   lightbox display
   const fullScreenImg = document.getElementById("bigimg")
 
@@ -15,15 +17,6 @@ const slider = () => {
 
   //   will be used to fetch images based on index
   let currentImgIndex = 0
-
-  //   an array of all the images
-  let arrayOfpics = []
-
-  //   fetches all images into arrayOfpics
-  images.forEach((img) => {
-    const src = img.getAttribute("src")
-    arrayOfpics.push(src)
-  })
 
   // open lightbox function
   const openLightbox = (e) => {
@@ -44,12 +37,11 @@ const slider = () => {
   const nextImg = () => {
     // if it currently thje last image then switch to first
     if (currentImgIndex === images.length - 1) {
-      currentImgIndex = 0
-      
+      currentImgIndex = -1
     }
-    //
     // set the next img index
     currentImgIndex++
+    //
     //fetches next img
     const nextPic = images[currentImgIndex].getAttribute("src")
     // display next image
@@ -60,9 +52,9 @@ const slider = () => {
   const prevImg = () => {
     // if it currently the first image then switch to last(unlimited scrolling)
     if (currentImgIndex === 0) {
-      currentImgIndex = images.length - 1
+      currentImgIndex = images.length
     }
-    //
+
     // set the next img index
     currentImgIndex--
     //fetches next img
@@ -71,8 +63,13 @@ const slider = () => {
     fullScreenImg.src = prevPic
   }
 
-  //   adding lightbox eventlisteners to images
+  //   adding lightbox eventlisteners to images(toggles lightbox on and off on click)
   images.forEach((i) => i.addEventListener("click", openLightbox))
+
+  // add eventlistener to lightbox in view images(toggles lightbox on an off on click)
+  lightBoxImg.addEventListener("click", () => {
+    trigger.toggleAttribute("inview")
+  })
 
   //   adding event lister to the next button
   nextBtn.addEventListener("click", nextImg)
