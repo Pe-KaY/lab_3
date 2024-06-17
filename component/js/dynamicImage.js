@@ -46,7 +46,7 @@ const dynamicImages = () => {
     .map(({ src, captionHead, caption }, i) => {
       const animnum = Math.floor(Math.random() * 2 + 1)
       return `<figure class="img-${i + 1} anim${animnum}">
-        <img src=${src} alt="gallery img" />
+        <img class="pics" src=${src} alt="gallery img" />
         <figcaption>
           <h1>${captionHead}</h1>
           <p>${caption}</p>
