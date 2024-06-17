@@ -15,6 +15,11 @@ import image14 from "../../images/image14.png"
 import image15 from "../../images/image15.png"
 import image16 from "../../images/image16.png"
 import image17 from "../../images/image17.png"
+import image18 from "../../images/image18.jpg"
+import image19 from "../../images/image19.png"
+import image20 from "../../images/image20.png"
+import image21 from "../../images/image21.png"
+import image22 from "../../images/image22.png"
 import slider from "./slider"
 
 const dynamicImages = () => {
@@ -40,6 +45,11 @@ const dynamicImages = () => {
     { src: image15, captionHead: `Model`, caption: `Portrait by a model` },
     { src: image16, captionHead: `Model`, caption: `Portrait by a model` },
     { src: image17, captionHead: `Model`, caption: `Portrait by a model` },
+    { src: image18, captionHead: `Model`, caption: `Portrait by a model` },
+    { src: image19, captionHead: `Model`, caption: `Portrait by a model` },
+    { src: image20, captionHead: `Model`, caption: `Portrait by a model` },
+    { src: image21, captionHead: `Model`, caption: `Portrait by a model` },
+    { src: image22, captionHead: `Model`, caption: `Portrait by a model` },
   ]
 
   display.innerHTML = images
