@@ -58,6 +58,12 @@
 .img-20 {
   grid-area: T;
 }
+.img-21 {
+  grid-area: U;
+}
+.img-22 {
+  grid-area: V;
+}
 
 .anim1 {
   animation: 15s infinite alternate ease-in-out 0.5s anim;
